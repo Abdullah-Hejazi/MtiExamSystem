@@ -1,8 +1,10 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,6 +16,8 @@ namespace MtiExamSystem
 		private static readonly HttpClient client = new HttpClient();
 		private String apiEndpoint = "http://localhost:3333";
 		private String token = "";
+		public String name = "";
+		public String role = "";
 
 		private ExamSystemAPI()
 		{
@@ -43,12 +47,16 @@ namespace MtiExamSystem
 
 				String endPointSuffix = "";
 
-				if (result["role"] == "student") {
+				role = result["role"];
+
+				if (role == "student") {
 					endPointSuffix = "students";
-				} else if (result["role"] == "professor")
+				} else if (role == "professor")
 				{
 					endPointSuffix = "professors";
 				}
+
+				this.name = result["name"];
 
 				this.apiEndpoint = this.apiEndpoint + "/" + endPointSuffix;
 
@@ -65,5 +73,20 @@ namespace MtiExamSystem
 			}
 		}
 
+		public async Task<List<Dictionary<string, string>>> Home() {
+			client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+			HttpResponseMessage response = await client.GetAsync(apiEndpoint + "/home");
+
+			if (response.StatusCode == System.Net.HttpStatusCode.OK)
+			{
+				var result = JsonConvert.DeserializeObject< Dictionary<string, List <Dictionary<string, string>>>>(response.Content.ReadAsStringAsync().Result);
+
+				return result["exams"];
+			}
+			else
+			{
+				return null;
+			}
+		}
 	}
 }

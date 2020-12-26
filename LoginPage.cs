@@ -27,9 +27,12 @@ namespace MtiExamSystem
 			var examSystemAPI = ExamSystemAPI.GetInstance();
 			var result = await examSystemAPI.Login(emailInput.Text, passwordInput.Text);
 
-			if (result["case"] == "true")
+			if (result["success"] == "true")
 			{
-				MessageBox.Show(result["token"]);
+				this.Hide();
+				var homePage = new HomePage();
+				homePage.Closed += (s, args) => this.Close();
+				homePage.Show();
 			}
 			else
 			{
