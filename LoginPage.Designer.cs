@@ -54,7 +54,6 @@ namespace MtiExamSystem
 			this.passwordInput.PasswordChar = '*';
 			this.passwordInput.Size = new System.Drawing.Size(267, 51);
 			this.passwordInput.TabIndex = 0;
-			this.passwordInput.Text = "password";
 			// 
 			// label1
 			// 
@@ -78,7 +77,6 @@ namespace MtiExamSystem
 			this.emailInput.Name = "emailInput";
 			this.emailInput.Size = new System.Drawing.Size(267, 51);
 			this.emailInput.TabIndex = 2;
-			this.emailInput.Text = "test@test.com";
 			// 
 			// button1
 			// 
