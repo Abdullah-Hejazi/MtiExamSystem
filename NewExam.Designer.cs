@@ -36,15 +36,19 @@ namespace MtiExamSystem
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.startsAtTime = new System.Windows.Forms.DateTimePicker();
+			this.label4 = new System.Windows.Forms.Label();
 			this.panel2 = new System.Windows.Forms.Panel();
-			this.emailInput = new System.Windows.Forms.TextBox();
-			this.newQuestionButton = new System.Windows.Forms.Button();
+			this.panel4 = new System.Windows.Forms.Panel();
+			this.panel3 = new System.Windows.Forms.Panel();
+			this.marksInput = new System.Windows.Forms.TextBox();
+			this.addChoiceButton = new System.Windows.Forms.Button();
+			this.choiceInput = new System.Windows.Forms.TextBox();
+			this.optionsList = new System.Windows.Forms.ComboBox();
 			this.multichoiceButton = new System.Windows.Forms.RadioButton();
 			this.truefalseButton = new System.Windows.Forms.RadioButton();
-			this.panel3 = new System.Windows.Forms.Panel();
-			this.optionsList = new System.Windows.Forms.ComboBox();
-			this.choiceInput = new System.Windows.Forms.TextBox();
-			this.addChoiceButton = new System.Windows.Forms.Button();
+			this.questionInput = new System.Windows.Forms.TextBox();
+			this.newQuestionButton = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
@@ -69,7 +73,7 @@ namespace MtiExamSystem
 			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button1.Font = new System.Drawing.Font("Cascadia Code", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.button1.ForeColor = System.Drawing.Color.White;
-			this.button1.Location = new System.Drawing.Point(137, 336);
+			this.button1.Location = new System.Drawing.Point(137, 403);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(365, 63);
 			this.button1.TabIndex = 8;
@@ -128,6 +132,8 @@ namespace MtiExamSystem
 			// 
 			// panel1
 			// 
+			this.panel1.Controls.Add(this.startsAtTime);
+			this.panel1.Controls.Add(this.label4);
 			this.panel1.Controls.Add(this.label1);
 			this.panel1.Controls.Add(this.label3);
 			this.panel1.Controls.Add(this.nameInput);
@@ -139,10 +145,30 @@ namespace MtiExamSystem
 			this.panel1.Size = new System.Drawing.Size(591, 487);
 			this.panel1.TabIndex = 12;
 			// 
+			// startsAtTime
+			// 
+			this.startsAtTime.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.startsAtTime.Location = new System.Drawing.Point(179, 338);
+			this.startsAtTime.Name = "startsAtTime";
+			this.startsAtTime.Size = new System.Drawing.Size(323, 26);
+			this.startsAtTime.TabIndex = 14;
+			// 
+			// label4
+			// 
+			this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.label4.AutoSize = true;
+			this.label4.Font = new System.Drawing.Font("Cascadia Code", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label4.Location = new System.Drawing.Point(18, 334);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(155, 32);
+			this.label4.TabIndex = 13;
+			this.label4.Text = "Starts At:";
+			// 
 			// panel2
 			// 
+			this.panel2.Controls.Add(this.panel4);
 			this.panel2.Controls.Add(this.panel3);
-			this.panel2.Controls.Add(this.emailInput);
+			this.panel2.Controls.Add(this.questionInput);
 			this.panel2.Controls.Add(this.newQuestionButton);
 			this.panel2.Location = new System.Drawing.Point(12, 14);
 			this.panel2.Name = "panel2";
@@ -150,33 +176,77 @@ namespace MtiExamSystem
 			this.panel2.TabIndex = 13;
 			this.panel2.Visible = false;
 			// 
-			// emailInput
+			// panel4
 			// 
-			this.emailInput.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.emailInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-			this.emailInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.emailInput.Font = new System.Drawing.Font("Cascadia Code", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.emailInput.Location = new System.Drawing.Point(20, 13);
-			this.emailInput.Multiline = true;
-			this.emailInput.Name = "emailInput";
-			this.emailInput.Size = new System.Drawing.Size(587, 44);
-			this.emailInput.TabIndex = 3;
-			this.emailInput.Text = "Question title";
+			this.panel4.AutoScroll = true;
+			this.panel4.BackColor = System.Drawing.SystemColors.HighlightText;
+			this.panel4.Location = new System.Drawing.Point(20, 186);
+			this.panel4.Name = "panel4";
+			this.panel4.Size = new System.Drawing.Size(727, 301);
+			this.panel4.TabIndex = 7;
 			// 
-			// newQuestionButton
+			// panel3
 			// 
-			this.newQuestionButton.BackColor = System.Drawing.Color.RoyalBlue;
-			this.newQuestionButton.FlatAppearance.BorderSize = 0;
-			this.newQuestionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.newQuestionButton.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.newQuestionButton.ForeColor = System.Drawing.Color.White;
-			this.newQuestionButton.Location = new System.Drawing.Point(613, 13);
-			this.newQuestionButton.Name = "newQuestionButton";
-			this.newQuestionButton.Size = new System.Drawing.Size(134, 44);
-			this.newQuestionButton.TabIndex = 2;
-			this.newQuestionButton.Text = "Add Question";
-			this.newQuestionButton.UseVisualStyleBackColor = false;
-			this.newQuestionButton.Visible = false;
+			this.panel3.BackColor = System.Drawing.SystemColors.ScrollBar;
+			this.panel3.Controls.Add(this.marksInput);
+			this.panel3.Controls.Add(this.addChoiceButton);
+			this.panel3.Controls.Add(this.choiceInput);
+			this.panel3.Controls.Add(this.optionsList);
+			this.panel3.Controls.Add(this.multichoiceButton);
+			this.panel3.Controls.Add(this.truefalseButton);
+			this.panel3.Location = new System.Drawing.Point(20, 63);
+			this.panel3.Name = "panel3";
+			this.panel3.Size = new System.Drawing.Size(727, 57);
+			this.panel3.TabIndex = 6;
+			// 
+			// marksInput
+			// 
+			this.marksInput.BackColor = System.Drawing.SystemColors.Menu;
+			this.marksInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.marksInput.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.marksInput.Location = new System.Drawing.Point(194, 15);
+			this.marksInput.Multiline = true;
+			this.marksInput.Name = "marksInput";
+			this.marksInput.Size = new System.Drawing.Size(54, 23);
+			this.marksInput.TabIndex = 8;
+			this.marksInput.Text = "5";
+			this.marksInput.TextChanged += new System.EventHandler(this.marksInput_TextChanged);
+			// 
+			// addChoiceButton
+			// 
+			this.addChoiceButton.BackColor = System.Drawing.Color.RoyalBlue;
+			this.addChoiceButton.FlatAppearance.BorderSize = 0;
+			this.addChoiceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.addChoiceButton.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.addChoiceButton.ForeColor = System.Drawing.Color.White;
+			this.addChoiceButton.Location = new System.Drawing.Point(443, 14);
+			this.addChoiceButton.Name = "addChoiceButton";
+			this.addChoiceButton.Size = new System.Drawing.Size(79, 23);
+			this.addChoiceButton.TabIndex = 7;
+			this.addChoiceButton.Text = "Add";
+			this.addChoiceButton.UseVisualStyleBackColor = false;
+			this.addChoiceButton.Click += new System.EventHandler(this.addChoiceButton_Click);
+			// 
+			// choiceInput
+			// 
+			this.choiceInput.BackColor = System.Drawing.SystemColors.Menu;
+			this.choiceInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.choiceInput.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.choiceInput.Location = new System.Drawing.Point(254, 15);
+			this.choiceInput.Multiline = true;
+			this.choiceInput.Name = "choiceInput";
+			this.choiceInput.Size = new System.Drawing.Size(183, 23);
+			this.choiceInput.TabIndex = 7;
+			this.choiceInput.Text = "Choice 1";
+			// 
+			// optionsList
+			// 
+			this.optionsList.FormattingEnabled = true;
+			this.optionsList.Location = new System.Drawing.Point(540, 15);
+			this.optionsList.Name = "optionsList";
+			this.optionsList.Size = new System.Drawing.Size(171, 23);
+			this.optionsList.TabIndex = 6;
+			this.optionsList.Text = "Answer";
 			// 
 			// multichoiceButton
 			// 
@@ -201,54 +271,33 @@ namespace MtiExamSystem
 			this.truefalseButton.UseVisualStyleBackColor = true;
 			this.truefalseButton.CheckedChanged += new System.EventHandler(this.truefalseButton_CheckedChanged);
 			// 
-			// panel3
+			// questionInput
 			// 
-			this.panel3.BackColor = System.Drawing.SystemColors.ScrollBar;
-			this.panel3.Controls.Add(this.addChoiceButton);
-			this.panel3.Controls.Add(this.choiceInput);
-			this.panel3.Controls.Add(this.optionsList);
-			this.panel3.Controls.Add(this.multichoiceButton);
-			this.panel3.Controls.Add(this.truefalseButton);
-			this.panel3.Location = new System.Drawing.Point(20, 63);
-			this.panel3.Name = "panel3";
-			this.panel3.Size = new System.Drawing.Size(727, 57);
-			this.panel3.TabIndex = 6;
+			this.questionInput.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.questionInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+			this.questionInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.questionInput.Font = new System.Drawing.Font("Cascadia Code", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.questionInput.Location = new System.Drawing.Point(20, 13);
+			this.questionInput.Multiline = true;
+			this.questionInput.Name = "questionInput";
+			this.questionInput.Size = new System.Drawing.Size(727, 44);
+			this.questionInput.TabIndex = 3;
+			this.questionInput.Text = "Question title";
 			// 
-			// optionsList
+			// newQuestionButton
 			// 
-			this.optionsList.FormattingEnabled = true;
-			this.optionsList.Location = new System.Drawing.Point(540, 15);
-			this.optionsList.Name = "optionsList";
-			this.optionsList.Size = new System.Drawing.Size(171, 23);
-			this.optionsList.TabIndex = 6;
-			this.optionsList.Text = "Answer";
-			// 
-			// choiceInput
-			// 
-			this.choiceInput.BackColor = System.Drawing.SystemColors.Menu;
-			this.choiceInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.choiceInput.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.choiceInput.Location = new System.Drawing.Point(218, 14);
-			this.choiceInput.Multiline = true;
-			this.choiceInput.Name = "choiceInput";
-			this.choiceInput.Size = new System.Drawing.Size(162, 23);
-			this.choiceInput.TabIndex = 7;
-			this.choiceInput.Text = "Choice 1";
-			// 
-			// addChoiceButton
-			// 
-			this.addChoiceButton.BackColor = System.Drawing.Color.RoyalBlue;
-			this.addChoiceButton.FlatAppearance.BorderSize = 0;
-			this.addChoiceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.addChoiceButton.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.addChoiceButton.ForeColor = System.Drawing.Color.White;
-			this.addChoiceButton.Location = new System.Drawing.Point(386, 14);
-			this.addChoiceButton.Name = "addChoiceButton";
-			this.addChoiceButton.Size = new System.Drawing.Size(136, 23);
-			this.addChoiceButton.TabIndex = 7;
-			this.addChoiceButton.Text = "Add Choice";
-			this.addChoiceButton.UseVisualStyleBackColor = false;
-			this.addChoiceButton.Visible = false;
+			this.newQuestionButton.BackColor = System.Drawing.Color.RoyalBlue;
+			this.newQuestionButton.FlatAppearance.BorderSize = 0;
+			this.newQuestionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.newQuestionButton.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.newQuestionButton.ForeColor = System.Drawing.Color.White;
+			this.newQuestionButton.Location = new System.Drawing.Point(250, 126);
+			this.newQuestionButton.Name = "newQuestionButton";
+			this.newQuestionButton.Size = new System.Drawing.Size(270, 44);
+			this.newQuestionButton.TabIndex = 2;
+			this.newQuestionButton.Text = "Add Question";
+			this.newQuestionButton.UseVisualStyleBackColor = false;
+			this.newQuestionButton.Click += new System.EventHandler(this.newQuestionButton_Click);
 			// 
 			// NewExam
 			// 
@@ -259,7 +308,9 @@ namespace MtiExamSystem
 			this.Controls.Add(this.panel1);
 			this.Font = new System.Drawing.Font("Cascadia Code", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Name = "NewExam";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "NewExam";
+			this.Load += new System.EventHandler(this.NewExam_Load);
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
 			this.panel2.ResumeLayout(false);
@@ -281,12 +332,16 @@ namespace MtiExamSystem
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Panel panel2;
 		private System.Windows.Forms.Button newQuestionButton;
-		private System.Windows.Forms.TextBox emailInput;
+		private System.Windows.Forms.TextBox questionInput;
 		private System.Windows.Forms.RadioButton truefalseButton;
 		private System.Windows.Forms.RadioButton multichoiceButton;
 		private System.Windows.Forms.Panel panel3;
 		private System.Windows.Forms.TextBox choiceInput;
 		private System.Windows.Forms.ComboBox optionsList;
 		private System.Windows.Forms.Button addChoiceButton;
+		private System.Windows.Forms.Panel panel4;
+		private System.Windows.Forms.DateTimePicker startsAtTime;
+		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.TextBox marksInput;
 	}
 }

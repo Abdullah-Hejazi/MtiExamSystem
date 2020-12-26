@@ -30,8 +30,8 @@ namespace MtiExamSystem
 		private void InitializeComponent()
 		{
 			this.panel2 = new System.Windows.Forms.Panel();
-			this.welcomeLabel = new System.Windows.Forms.Label();
 			this.newExamButton = new System.Windows.Forms.Button();
+			this.welcomeLabel = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.panel2.SuspendLayout();
 			this.panel1.SuspendLayout();
@@ -46,17 +46,6 @@ namespace MtiExamSystem
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new System.Drawing.Size(764, 63);
 			this.panel2.TabIndex = 0;
-			// 
-			// welcomeLabel
-			// 
-			this.welcomeLabel.AutoSize = true;
-			this.welcomeLabel.Font = new System.Drawing.Font("Cascadia Code", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.welcomeLabel.ForeColor = System.Drawing.SystemColors.GrayText;
-			this.welcomeLabel.Location = new System.Drawing.Point(11, 15);
-			this.welcomeLabel.Name = "welcomeLabel";
-			this.welcomeLabel.Size = new System.Drawing.Size(141, 32);
-			this.welcomeLabel.TabIndex = 0;
-			this.welcomeLabel.Text = "Welcome, ";
 			// 
 			// newExamButton
 			// 
@@ -73,6 +62,17 @@ namespace MtiExamSystem
 			this.newExamButton.UseVisualStyleBackColor = false;
 			this.newExamButton.Visible = false;
 			this.newExamButton.Click += new System.EventHandler(this.newExamButton_Click);
+			// 
+			// welcomeLabel
+			// 
+			this.welcomeLabel.AutoSize = true;
+			this.welcomeLabel.Font = new System.Drawing.Font("Cascadia Code", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.welcomeLabel.ForeColor = System.Drawing.SystemColors.GrayText;
+			this.welcomeLabel.Location = new System.Drawing.Point(11, 15);
+			this.welcomeLabel.Name = "welcomeLabel";
+			this.welcomeLabel.Size = new System.Drawing.Size(141, 32);
+			this.welcomeLabel.TabIndex = 0;
+			this.welcomeLabel.Text = "Welcome, ";
 			// 
 			// panel1
 			// 
@@ -91,6 +91,7 @@ namespace MtiExamSystem
 			this.Controls.Add(this.panel1);
 			this.Font = new System.Drawing.Font("Cascadia Code", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Name = "HomePage";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "HomePage";
 			this.Load += new System.EventHandler(this.HomePage_Load);
 			this.panel2.ResumeLayout(false);

@@ -88,5 +88,71 @@ namespace MtiExamSystem
 				return null;
 			}
 		}
+
+		public async Task<int> NewExam(String examName, int duration, String startsAt)
+		{
+			var values = new Dictionary<string, string>
+			{
+				{ "name", examName},
+				{ "duration", duration.ToString() },
+				{ "starts_at", startsAt }
+			};
+
+			var content = new FormUrlEncodedContent(values);
+			HttpResponseMessage response = await client.PostAsync(apiEndpoint + "/exam/new", content);
+
+			if (response.StatusCode == System.Net.HttpStatusCode.OK)
+			{
+
+				var result = JsonConvert.DeserializeObject<Dictionary<string, int>>(response.Content.ReadAsStringAsync().Result);
+
+				return result["id"];
+			}
+			else
+			{
+				return -1;
+			}
+		}
+
+		public async Task<bool> AddQuestion(int id, String question, String answer, String options, String type, String marks)
+		{
+			var values = new Dictionary<string, string>
+			{
+				{ "question", question},
+				{ "answer", answer },
+				{ "options", options },
+				{ "type", type },
+				{ "marks", marks }
+			};
+
+			var content = new FormUrlEncodedContent(values);
+			HttpResponseMessage response = await client.PostAsync(apiEndpoint + "/exam/" + id.ToString() + "/questions/add", content);
+
+			if (response.StatusCode == System.Net.HttpStatusCode.OK)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+
+		public async Task<List<Dictionary<string, string>>> GetExam(int id)
+		{
+			client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+			HttpResponseMessage response = await client.GetAsync(apiEndpoint + "/exam/" + id.ToString());
+
+			if (response.StatusCode == System.Net.HttpStatusCode.OK)
+			{
+				var result = JsonConvert.DeserializeObject<Dictionary<string, List<Dictionary<string, string>>>>(response.Content.ReadAsStringAsync().Result);
+
+				return result["questions"];
+			}
+			else
+			{
+				return null;
+			}
+		}
 	}
 }

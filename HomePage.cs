@@ -12,6 +12,7 @@ namespace MtiExamSystem
 {
 	public partial class HomePage : Form
 	{
+		public static int selectedExamId = -1;
 		public HomePage()
 		{
 			InitializeComponent();
@@ -61,18 +62,20 @@ namespace MtiExamSystem
 				startsAtLabel.Size = new Size(600, 15);
 				panel.Controls.Add(startsAtLabel);
 
-				Button participateButton = new Button();
-				participateButton.Text = "Participate";
-				participateButton.UseVisualStyleBackColor = false;
-				participateButton.FlatStyle = FlatStyle.Flat;
-				participateButton.ForeColor = Color.FromKnownColor(KnownColor.White);
-				participateButton.BackColor = Color.FromKnownColor(KnownColor.DarkOrange);
-				participateButton.FlatAppearance.BorderSize = 0;
-				participateButton.Size = new Size(87, 56);
-				participateButton.Location = new Point(672, 4);
-				participateButton.Click += (object s, EventArgs ee) => { ParticipateInExam(s, ee, exam["id"]); } ;
-				participateButton.Visible = true;
-				panel.Controls.Add(participateButton);
+				if (ExamSystemAPI.GetInstance().role == "student") {
+					Button participateButton = new Button();
+					participateButton.Text = "Participate";
+					participateButton.UseVisualStyleBackColor = false;
+					participateButton.FlatStyle = FlatStyle.Flat;
+					participateButton.ForeColor = Color.FromKnownColor(KnownColor.White);
+					participateButton.BackColor = Color.FromKnownColor(KnownColor.DarkOrange);
+					participateButton.FlatAppearance.BorderSize = 0;
+					participateButton.Size = new Size(87, 56);
+					participateButton.Location = new Point(672, 4);
+					participateButton.Click += (object s, EventArgs ee) => { ParticipateInExam(s, ee, exam["id"]); };
+					participateButton.Visible = true;
+					panel.Controls.Add(participateButton);
+				}
 
 				panel.Visible = true;
 
@@ -90,7 +93,12 @@ namespace MtiExamSystem
 
 		private void ParticipateInExam(object sender, EventArgs e, string id)
 		{
-			MessageBox.Show(id);
+			selectedExamId = int.Parse(id);
+
+			this.Hide();
+			var solveExam = new SolveExam();
+			solveExam.Closed += (s, args) => this.Close();
+			solveExam.Show();
 		}
 
 		private void newExamButton_Click(object sender, EventArgs e)
