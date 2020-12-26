@@ -29,6 +29,7 @@ namespace MtiExamSystem
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.newExamButton = new System.Windows.Forms.Button();
 			this.welcomeLabel = new System.Windows.Forms.Label();
@@ -90,6 +91,7 @@ namespace MtiExamSystem
 			this.ClientSize = new System.Drawing.Size(797, 461);
 			this.Controls.Add(this.panel1);
 			this.Font = new System.Drawing.Font("Cascadia Code", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "HomePage";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "HomePage";

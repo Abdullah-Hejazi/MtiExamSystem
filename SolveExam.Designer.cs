@@ -29,6 +29,7 @@ namespace MtiExamSystem
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SolveExam));
 			this.questionsPanel = new System.Windows.Forms.Panel();
 			this.label1 = new System.Windows.Forms.Label();
 			this.submitAnswersButton = new System.Windows.Forms.Button();
@@ -76,6 +77,7 @@ namespace MtiExamSystem
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.questionsPanel);
 			this.Font = new System.Drawing.Font("Cascadia Code", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "SolveExam";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "SolveExam";
