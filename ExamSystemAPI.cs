@@ -1,12 +1,12 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace MtiExamSystem
 {
@@ -154,5 +154,29 @@ namespace MtiExamSystem
 				return null;
 			}
 		}
+
+		public async Task<int> SolveExam(int id, String answers)
+		{
+			var values = new Dictionary<string, string>
+			{
+				{ "answers", answers }
+			};
+
+			var content = new FormUrlEncodedContent(values);
+			HttpResponseMessage response = await client.PostAsync(apiEndpoint + "/exam/" + id.ToString() + "/answer", content);
+
+			if (response.StatusCode == System.Net.HttpStatusCode.OK)
+			{
+				var result = JsonConvert.DeserializeObject<Dictionary<string, int>>(response.Content.ReadAsStringAsync().Result);
+				return result["marks"];
+			}
+			else
+			{
+				var result = JsonConvert.DeserializeObject<Dictionary<string, string>>(response.Content.ReadAsStringAsync().Result);
+				MessageBox.Show(result["message"]);
+				return -1;
+			}
+		}
+
 	}
 }

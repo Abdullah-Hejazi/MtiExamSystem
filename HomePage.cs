@@ -95,9 +95,7 @@ namespace MtiExamSystem
 		{
 			selectedExamId = int.Parse(id);
 
-			this.Hide();
 			var solveExam = new SolveExam();
-			solveExam.Closed += (s, args) => this.Close();
 			solveExam.Show();
 		}
 
