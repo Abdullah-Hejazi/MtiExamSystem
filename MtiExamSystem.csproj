@@ -123,6 +123,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="iconfinder_paper-clip-academic-note-exam_2824438.ico" />
+    <None Include="Resources\1.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -33,9 +33,11 @@ namespace MtiExamSystem
 			this.passwordInput = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.emailInput = new System.Windows.Forms.TextBox();
+			this.button1 = new System.Windows.Forms.Button();
+			this.loading = new System.Windows.Forms.PictureBox();
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			this.button1 = new System.Windows.Forms.Button();
+			((System.ComponentModel.ISupportInitialize)(this.loading)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
@@ -78,6 +80,33 @@ namespace MtiExamSystem
 			this.emailInput.TabIndex = 2;
 			this.emailInput.Text = "test@test.com";
 			// 
+			// button1
+			// 
+			this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.button1.BackColor = System.Drawing.Color.RoyalBlue;
+			this.button1.FlatAppearance.BorderSize = 0;
+			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button1.Font = new System.Drawing.Font("Cascadia Code", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button1.ForeColor = System.Drawing.Color.White;
+			this.button1.Location = new System.Drawing.Point(221, 323);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(334, 55);
+			this.button1.TabIndex = 5;
+			this.button1.Text = "Login";
+			this.button1.UseVisualStyleBackColor = false;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
+			// 
+			// loading
+			// 
+			this.loading.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+			this.loading.Image = global::MtiExamSystem.Properties.Resources._1;
+			this.loading.Location = new System.Drawing.Point(164, 72);
+			this.loading.Name = "loading";
+			this.loading.Size = new System.Drawing.Size(452, 318);
+			this.loading.TabIndex = 6;
+			this.loading.TabStop = false;
+			this.loading.Visible = false;
+			// 
 			// pictureBox2
 			// 
 			this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -104,28 +133,13 @@ namespace MtiExamSystem
 			this.pictureBox1.TabIndex = 3;
 			this.pictureBox1.TabStop = false;
 			// 
-			// button1
-			// 
-			this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.button1.BackColor = System.Drawing.Color.RoyalBlue;
-			this.button1.FlatAppearance.BorderSize = 0;
-			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button1.Font = new System.Drawing.Font("Cascadia Code", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button1.ForeColor = System.Drawing.Color.White;
-			this.button1.Location = new System.Drawing.Point(221, 323);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(334, 55);
-			this.button1.TabIndex = 5;
-			this.button1.Text = "Login";
-			this.button1.UseVisualStyleBackColor = false;
-			this.button1.Click += new System.EventHandler(this.button1_Click);
-			// 
 			// LoginPage
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
 			this.ClientSize = new System.Drawing.Size(784, 461);
+			this.Controls.Add(this.loading);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.passwordInput);
@@ -137,6 +151,8 @@ namespace MtiExamSystem
 			this.Name = "LoginPage";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Exam System - LoginPage";
+			this.Load += new System.EventHandler(this.LoginPage_Load);
+			((System.ComponentModel.ISupportInitialize)(this.loading)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
@@ -152,5 +168,6 @@ namespace MtiExamSystem
 		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.PictureBox pictureBox2;
 		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.PictureBox loading;
 	}
 }

@@ -22,6 +22,7 @@ namespace MtiExamSystem
 
 		private async void SolveExam_Load(object sender, EventArgs e)
 		{
+			this.MaximizeBox = false;
 			var result = await ExamSystemAPI.GetInstance().GetExam(HomePage.selectedExamId);
 			int index = 0;
 

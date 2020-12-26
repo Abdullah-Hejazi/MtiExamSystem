@@ -126,6 +126,7 @@ namespace MtiExamSystem
 
 		private void NewExam_Load(object sender, EventArgs e)
 		{
+			this.MaximizeBox = false;
 			startsAtTime.Format = DateTimePickerFormat.Custom;
 			startsAtTime.CustomFormat = "yyyy-MM-dd hh:mm:ss";
 		}

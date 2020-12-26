@@ -23,6 +23,8 @@ namespace MtiExamSystem
 				MessageBox.Show("Please fill in the email and password !");
 				return;
 			}
+			loading.Visible = true;
+
 
 			var examSystemAPI = ExamSystemAPI.GetInstance();
 			var result = await examSystemAPI.Login(emailInput.Text, passwordInput.Text);
@@ -38,6 +40,13 @@ namespace MtiExamSystem
 			{
 				MessageBox.Show("Invalid data !");
 			}
+
+			loading.Visible = false;
+		}
+
+		private void LoginPage_Load(object sender, EventArgs e)
+		{
+			this.MaximizeBox = false;
 		}
 	}
 }

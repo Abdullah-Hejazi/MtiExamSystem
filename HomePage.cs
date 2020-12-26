@@ -20,6 +20,7 @@ namespace MtiExamSystem
 
 		private async void HomePage_Load(object sender, EventArgs e)
 		{
+			this.MaximizeBox = false;
 			var examSystemApi = ExamSystemAPI.GetInstance();
 			var result = await examSystemApi.Home();
 
@@ -68,7 +69,7 @@ namespace MtiExamSystem
 					participateButton.UseVisualStyleBackColor = false;
 					participateButton.FlatStyle = FlatStyle.Flat;
 					participateButton.ForeColor = Color.FromKnownColor(KnownColor.White);
-					participateButton.BackColor = Color.FromKnownColor(KnownColor.DarkOrange);
+					participateButton.BackColor = Color.FromKnownColor(KnownColor.RoyalBlue);
 					participateButton.FlatAppearance.BorderSize = 0;
 					participateButton.Size = new Size(87, 56);
 					participateButton.Location = new Point(672, 4);
