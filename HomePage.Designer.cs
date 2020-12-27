@@ -45,7 +45,7 @@ namespace MtiExamSystem
 			this.panel2.Controls.Add(this.welcomeLabel);
 			this.panel2.Location = new System.Drawing.Point(7, 5);
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(764, 63);
+			this.panel2.Size = new System.Drawing.Size(764, 59);
 			this.panel2.TabIndex = 0;
 			// 
 			// newExamButton
@@ -57,7 +57,7 @@ namespace MtiExamSystem
 			this.newExamButton.ForeColor = System.Drawing.Color.White;
 			this.newExamButton.Location = new System.Drawing.Point(627, 3);
 			this.newExamButton.Name = "newExamButton";
-			this.newExamButton.Size = new System.Drawing.Size(134, 57);
+			this.newExamButton.Size = new System.Drawing.Size(134, 53);
 			this.newExamButton.TabIndex = 1;
 			this.newExamButton.Text = "New Exam";
 			this.newExamButton.UseVisualStyleBackColor = false;
@@ -69,7 +69,7 @@ namespace MtiExamSystem
 			this.welcomeLabel.AutoSize = true;
 			this.welcomeLabel.Font = new System.Drawing.Font("Cascadia Code", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.welcomeLabel.ForeColor = System.Drawing.SystemColors.GrayText;
-			this.welcomeLabel.Location = new System.Drawing.Point(11, 15);
+			this.welcomeLabel.Location = new System.Drawing.Point(11, 14);
 			this.welcomeLabel.Name = "welcomeLabel";
 			this.welcomeLabel.Size = new System.Drawing.Size(141, 32);
 			this.welcomeLabel.TabIndex = 0;
@@ -80,17 +80,17 @@ namespace MtiExamSystem
 			this.panel1.Controls.Add(this.panel2);
 			this.panel1.Location = new System.Drawing.Point(2, 4);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(793, 455);
+			this.panel1.Size = new System.Drawing.Size(793, 425);
 			this.panel1.TabIndex = 1;
 			// 
 			// HomePage
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
-			this.ClientSize = new System.Drawing.Size(797, 461);
+			this.ClientSize = new System.Drawing.Size(797, 430);
 			this.Controls.Add(this.panel1);
-			this.Font = new System.Drawing.Font("Cascadia Code", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "HomePage";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

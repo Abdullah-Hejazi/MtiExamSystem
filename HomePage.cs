@@ -49,7 +49,7 @@ namespace MtiExamSystem
 				Label examName = new Label();
 				examName.Text = exam["name"];
 				examName.Location = new Point(6, 3);
-				examName.Font = new Font(new FontFamily("Cascadia Code"), 20.25f, FontStyle.Regular);
+				examName.Font = new Font(new FontFamily("Arial"), 20.25f, FontStyle.Regular);
 				examName.Size = new Size(600, 35);
 				examName.Visible = true;
 				panel.Controls.Add(examName);
@@ -58,7 +58,7 @@ namespace MtiExamSystem
 				Label startsAtLabel = new Label();
 				startsAtLabel.Text = "Starts at: " + exam["starts_at"];
 				startsAtLabel.Location = new Point(8, 39);
-				startsAtLabel.Font = new Font(new FontFamily("Cascadia Code"), 8.25f, FontStyle.Regular);
+				startsAtLabel.Font = new Font(new FontFamily("Arial"), 8.25f, FontStyle.Regular);
 				startsAtLabel.Visible = true;
 				startsAtLabel.Size = new Size(600, 15);
 				panel.Controls.Add(startsAtLabel);

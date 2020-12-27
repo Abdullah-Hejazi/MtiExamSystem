@@ -48,11 +48,11 @@ namespace MtiExamSystem
 			this.passwordInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
 			this.passwordInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.passwordInput.Font = new System.Drawing.Font("Cascadia Code", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.passwordInput.Location = new System.Drawing.Point(288, 235);
+			this.passwordInput.Location = new System.Drawing.Point(288, 219);
 			this.passwordInput.Multiline = true;
 			this.passwordInput.Name = "passwordInput";
 			this.passwordInput.PasswordChar = '*';
-			this.passwordInput.Size = new System.Drawing.Size(267, 51);
+			this.passwordInput.Size = new System.Drawing.Size(267, 48);
 			this.passwordInput.TabIndex = 0;
 			// 
 			// label1
@@ -60,7 +60,7 @@ namespace MtiExamSystem
 			this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Cascadia Code", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(310, 72);
+			this.label1.Location = new System.Drawing.Point(310, 67);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(125, 46);
 			this.label1.TabIndex = 1;
@@ -72,10 +72,10 @@ namespace MtiExamSystem
 			this.emailInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
 			this.emailInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.emailInput.Font = new System.Drawing.Font("Cascadia Code", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.emailInput.Location = new System.Drawing.Point(288, 153);
+			this.emailInput.Location = new System.Drawing.Point(288, 143);
 			this.emailInput.Multiline = true;
 			this.emailInput.Name = "emailInput";
-			this.emailInput.Size = new System.Drawing.Size(267, 51);
+			this.emailInput.Size = new System.Drawing.Size(267, 48);
 			this.emailInput.TabIndex = 2;
 			// 
 			// button1
@@ -86,9 +86,9 @@ namespace MtiExamSystem
 			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button1.Font = new System.Drawing.Font("Cascadia Code", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.button1.ForeColor = System.Drawing.Color.White;
-			this.button1.Location = new System.Drawing.Point(221, 323);
+			this.button1.Location = new System.Drawing.Point(221, 301);
 			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(334, 55);
+			this.button1.Size = new System.Drawing.Size(334, 51);
 			this.button1.TabIndex = 5;
 			this.button1.Text = "Login";
 			this.button1.UseVisualStyleBackColor = false;
@@ -98,9 +98,9 @@ namespace MtiExamSystem
 			// 
 			this.loading.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
 			this.loading.Image = global::MtiExamSystem.Properties.Resources._1;
-			this.loading.Location = new System.Drawing.Point(164, 72);
+			this.loading.Location = new System.Drawing.Point(164, 67);
 			this.loading.Name = "loading";
-			this.loading.Size = new System.Drawing.Size(452, 318);
+			this.loading.Size = new System.Drawing.Size(452, 297);
 			this.loading.TabIndex = 6;
 			this.loading.TabStop = false;
 			this.loading.Visible = false;
@@ -111,9 +111,9 @@ namespace MtiExamSystem
 			this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
 			this.pictureBox2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.ErrorImage")));
 			this.pictureBox2.Image = global::MtiExamSystem.Properties.Resources.iconfinder_lock_24_103178;
-			this.pictureBox2.Location = new System.Drawing.Point(221, 235);
+			this.pictureBox2.Location = new System.Drawing.Point(221, 219);
 			this.pictureBox2.Name = "pictureBox2";
-			this.pictureBox2.Size = new System.Drawing.Size(67, 51);
+			this.pictureBox2.Size = new System.Drawing.Size(67, 48);
 			this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox2.TabIndex = 4;
 			this.pictureBox2.TabStop = false;
@@ -124,19 +124,19 @@ namespace MtiExamSystem
 			this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
 			this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
 			this.pictureBox1.Image = global::MtiExamSystem.Properties.Resources.iconfinder_icon_email_211660__1_;
-			this.pictureBox1.Location = new System.Drawing.Point(221, 153);
+			this.pictureBox1.Location = new System.Drawing.Point(221, 143);
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(67, 51);
+			this.pictureBox1.Size = new System.Drawing.Size(67, 48);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
 			this.pictureBox1.TabIndex = 3;
 			this.pictureBox1.TabStop = false;
 			// 
 			// LoginPage
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
-			this.ClientSize = new System.Drawing.Size(784, 461);
+			this.ClientSize = new System.Drawing.Size(784, 430);
 			this.Controls.Add(this.loading);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.button1);
@@ -144,7 +144,7 @@ namespace MtiExamSystem
 			this.Controls.Add(this.pictureBox2);
 			this.Controls.Add(this.emailInput);
 			this.Controls.Add(this.pictureBox1);
-			this.Font = new System.Drawing.Font("Cascadia Code", 8.25F);
+			this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "LoginPage";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

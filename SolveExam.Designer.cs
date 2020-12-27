@@ -37,16 +37,16 @@ namespace MtiExamSystem
 			// 
 			// questionsPanel
 			// 
-			this.questionsPanel.Location = new System.Drawing.Point(12, 50);
+			this.questionsPanel.Location = new System.Drawing.Point(12, 47);
 			this.questionsPanel.Name = "questionsPanel";
-			this.questionsPanel.Size = new System.Drawing.Size(760, 399);
+			this.questionsPanel.Size = new System.Drawing.Size(760, 372);
 			this.questionsPanel.TabIndex = 0;
 			// 
 			// label1
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Cascadia Code", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(12, 9);
+			this.label1.Location = new System.Drawing.Point(12, 8);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(141, 32);
 			this.label1.TabIndex = 1;
@@ -60,9 +60,9 @@ namespace MtiExamSystem
 			this.submitAnswersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.submitAnswersButton.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.submitAnswersButton.ForeColor = System.Drawing.Color.White;
-			this.submitAnswersButton.Location = new System.Drawing.Point(660, 9);
+			this.submitAnswersButton.Location = new System.Drawing.Point(660, 8);
 			this.submitAnswersButton.Name = "submitAnswersButton";
-			this.submitAnswersButton.Size = new System.Drawing.Size(112, 32);
+			this.submitAnswersButton.Size = new System.Drawing.Size(112, 30);
 			this.submitAnswersButton.TabIndex = 6;
 			this.submitAnswersButton.Text = "Submit Answers";
 			this.submitAnswersButton.UseVisualStyleBackColor = false;
@@ -70,13 +70,13 @@ namespace MtiExamSystem
 			// 
 			// SolveExam
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(801, 461);
+			this.ClientSize = new System.Drawing.Size(801, 430);
 			this.Controls.Add(this.submitAnswersButton);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.questionsPanel);
-			this.Font = new System.Drawing.Font("Cascadia Code", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "SolveExam";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

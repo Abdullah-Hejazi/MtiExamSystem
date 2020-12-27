@@ -37,7 +37,7 @@ namespace MtiExamSystem
 				Label questionTitle = new Label();
 				questionTitle.Text = item["question"];
 				questionTitle.Location = new Point(8, 7);
-				questionTitle.Font = new Font(new FontFamily("Cascadia Code"), 12f, FontStyle.Regular);
+				questionTitle.Font = new Font(new FontFamily("Arial"), 12f, FontStyle.Regular);
 				questionTitle.Size = new Size(600, 21);
 				questionTitle.Visible = true;
 				panel.Controls.Add(questionTitle);
@@ -46,7 +46,7 @@ namespace MtiExamSystem
 				Label marksLabel = new Label();
 				marksLabel.Text = item["marks"] + " Marks";
 				marksLabel.Location = new Point(649, 7);
-				marksLabel.Font = new Font(new FontFamily("Cascadia Code"), 12f, FontStyle.Regular);
+				marksLabel.Font = new Font(new FontFamily("Arial"), 12f, FontStyle.Regular);
 				marksLabel.Size = new Size(83, 21);
 				marksLabel.Visible = true;
 				panel.Controls.Add(marksLabel);
@@ -55,7 +55,7 @@ namespace MtiExamSystem
 				Label answerLabel = new Label();
 				answerLabel.Text = "Your Answer: ";
 				answerLabel.Location = new Point(8, 43);
-				answerLabel.Font = new Font(new FontFamily("Cascadia Code"), 9f, FontStyle.Regular);
+				answerLabel.Font = new Font(new FontFamily("Arial"), 9f, FontStyle.Regular);
 				answerLabel.Size = new Size(114, 17);
 				answerLabel.Visible = true;
 				panel.Controls.Add(answerLabel);
@@ -63,7 +63,7 @@ namespace MtiExamSystem
 				ComboBox answersList = new ComboBox();
 				answersList.Size = new Size(254, 23);
 				answersList.Location = new Point(147, 40);
-				answersList.Font = new Font(new FontFamily("Cascadia Code"), 12f, FontStyle.Regular);
+				answersList.Font = new Font(new FontFamily("Arial"), 12f, FontStyle.Regular);
 				answersList.Visible = true;
 				panel.Controls.Add(answersList);
 
