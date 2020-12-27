@@ -14,7 +14,7 @@ namespace MtiExamSystem
 	{
 		private static readonly ExamSystemAPI _instance = new ExamSystemAPI();
 		private static readonly HttpClient client = new HttpClient();
-		private String apiEndpoint = "http://localhost:3333";
+		private String apiEndpoint = "http://35.198.117.174";
 		private String token = "";
 		public String name = "";
 		public String role = "";
